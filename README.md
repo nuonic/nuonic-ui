@@ -5,7 +5,7 @@ Shared UI components for Nuonic web apps. Ships TypeScript source — consumers 
 ## Installing
 
 ```json
-"@nuonic/ui": "git+ssh://git@github.com/nuonic/nuonic-ui.git#v0.1.2"
+"@nuonic/ui": "github:nuonic/nuonic-ui#v0.1.2"
 ```
 
 Consumers also need:

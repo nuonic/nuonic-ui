@@ -20,6 +20,7 @@ export default function RagChatWidget({
   suggestions,
   resolveImageUrl,
   maxHistoryMessages,
+  openEventName,
 }: RagChatWidgetProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { input, setInput, messages, isSending, isClosed, send, clearMessages } = useRagChat({
@@ -28,6 +29,15 @@ export default function RagChatWidget({
   });
   const { size, onResizeMouseDown } = useResizablePanel();
   const bottomRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!openEventName) return;
+
+    const openWidget = () => setIsOpen(true);
+
+    window.addEventListener(openEventName, openWidget);
+    return () => window.removeEventListener(openEventName, openWidget);
+  }, [openEventName]);
 
   useEffect(() => {
     const el = bottomRef.current;

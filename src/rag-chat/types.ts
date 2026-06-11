@@ -36,4 +36,6 @@ export type RagChatWidgetProps = {
   resolveImageUrl?: (url: string) => string;
   /** When set, only the most recent N messages are sent to the endpoint. */
   maxHistoryMessages?: number;
+  /** When set, dispatching this window event opens the widget. */
+  openEventName?: string;
 };

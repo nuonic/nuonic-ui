@@ -1,6 +1,6 @@
 {
   "name": "@nuonic/ui",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "description": "Shared UI components for Nuonic web apps",
   "repository": "git@github.com:nuonic/nuonic-ui.git",
